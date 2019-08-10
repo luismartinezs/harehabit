@@ -4,7 +4,7 @@
     <v-spacer></v-spacer>
     <v-toolbar-title>Harehabit</v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-btn icon>
+    <v-btn @click.stop="$emit('open-habit-modal')" icon>
       <v-icon>mdi-plus-circle</v-icon>
     </v-btn>
   </v-toolbar>

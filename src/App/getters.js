@@ -1,0 +1,1 @@
+export const LOAD_HABIT_LIST = 'LOAD_HABIT_LIST';
