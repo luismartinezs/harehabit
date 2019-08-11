@@ -5,13 +5,13 @@ import App from './App.vue';
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'habit-list',
-      component: App,
-    },
-  ],
+	mode: 'history',
+	base: process.env.BASE_URL,
+	routes: [
+		{
+			path: '/',
+			name: 'habit-list',
+			component: App
+		}
+	]
 });

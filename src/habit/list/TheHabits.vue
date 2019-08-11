@@ -8,13 +8,13 @@
 							<v-list-item-title v-text="habit.title"></v-list-item-title>
 						</v-list-item-content>
 
-						<v-list-item-action>
-							<v-list-item-action-text v-text="habit.action"></v-list-item-action-text>
-						</v-list-item-action>
+						<v-btn @click.stop="$emit('open-habit-modal', { id: habit.id })" icon>
+							<v-icon>mdi-pencil</v-icon>
+						</v-btn>
 					</template>
 				</v-list-item>
 
-				<v-divider v-if="index + 1 <= habit.length" :key="index"></v-divider>
+				<v-divider v-if="index + 1 <= habits.length" :key="index"></v-divider>
 			</template>
 		</v-list-item-group>
 	</v-list>
@@ -28,6 +28,11 @@ export default {
 	name: 'TheHabits',
 	computed: {
 		...mapGetters({ habits: [GET_HABIT_LIST] })
+	},
+	methods: {
+		openEditModal() {
+			return null;
+		}
 	}
 };
 </script>
